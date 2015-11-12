@@ -22,7 +22,9 @@ void setup() {
   
   //velX = random(-5, 5);
   //velY = random(-5, 5);
-  vel = new PVector(random(-5, 5),random(-5, 5)); //initialize vel, replaces initializing velX and velY
+  //vel = new PVector(random(-5, 5),random(-5, 5)); //initialize vel, replaces initializing velX and velY
+  vel = PVector.random2D(); //creating a random 2D vector
+  vel.mult(100);
 }
 
 void draw() {
