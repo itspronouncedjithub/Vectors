@@ -15,10 +15,8 @@ void setup() {
   //initialize variables
   loc = new PVector(width/2,height/2);
   vel = PVector.random2D(); //creating a random 2D vector
-  vel.mult(5);
+  vel.mult(3);
   acc = new PVector();
-  acc.mult(.8);
-  vel.limit(8);
   
   diam = 80;
 }
@@ -30,9 +28,13 @@ void draw() {
   //draw ball
   ellipse(loc.x, loc.y, diam, diam);
 
+  acc = PVector.random2D(); //creating a random 2D vector
+  
   //add acc to vel
   vel.add(acc);
 
+  vel.limit(8);
+  
   //add velocity to position
   loc.add(vel);
 
